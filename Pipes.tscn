@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://images/pipes.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 65.1746, 92.2109 )
+
+[node name="Area2d" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -24.5797 )
+shape = SubResource( 1 )
+
+[node name="pipes" type="Sprite" parent="."]
+position = Vector2( 0, -23.6344 )
+scale = Vector2( 1, 1.36929 )
+texture = ExtResource( 1 )

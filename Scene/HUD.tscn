@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/HUD.gd" type="Script" id=1]
+[ext_resource path="res://images/bg.jpeg" type="Texture" id=2]
+[ext_resource path="res://animation/flappy_bird_fly2.png" type="Texture" id=3]
+[ext_resource path="res://animation/flappy_bird_fly.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Control" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -109.5
+margin_top = -46.5
+margin_right = 109.5
+margin_bottom = 46.5
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -400.722
+margin_top = -250.878
+margin_right = 617.278
+margin_bottom = 350.122
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayAgain" type="Button" parent="."]
+margin_left = 45.136
+margin_top = 58.4319
+margin_right = 124.136
+margin_bottom = 93.4319
+text = "Play"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="."]
+margin_left = 39.6011
+margin_top = 8.84319
+margin_right = 132.601
+margin_bottom = 39.8432
+text = "
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BirdStuck" type="AnimatedSprite" parent="."]
+position = Vector2( -206.809, 56.05 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+[connection signal="pressed" from="PlayAgain" to="." method="_on_PlayAgain_pressed"]
