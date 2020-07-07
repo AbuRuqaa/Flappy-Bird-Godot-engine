@@ -1,3 +1,3 @@
 # Flappy-Bird-Godot-engine
-flappy bird game with the godot engine I just made it for practice and it was fun :D
+flappy bird game with godot engine as my first game
 
